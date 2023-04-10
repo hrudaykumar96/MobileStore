@@ -1,0 +1,254 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container span {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 45px;
+}
+
+.container h3 {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 45px;
+}
+
+.bg-primary {
+    background-color: rgb(55, 167, 211) !important;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: white;
+}
+
+nav .btn-primary {
+    background-color: white;
+    color: rgb(55, 167, 211);
+}
+
+form {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg,
+            rgba(245, 70, 66, 0.75),
+            rgba(8, 83, 156, 0.75)), url(images/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-outline {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(55, 167, 211);
+    padding-right: 10px;
+}
+
+.form-outline i {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.col a {
+    text-decoration: none;
+    color: white;
+}
+
+.col a:hover {
+    color: rgb(52, 52, 209);
+}
+
+.text-center a {
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    color: blue !important;
+}
+
+.login {
+    padding: 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 5px rgb(32, 30, 30);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    bottom: 100%;
+    left: auto;
+    right: auto;
+}
+
+.login h3 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px white;
+}
+
+.signup {
+    padding: 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 5px rgb(32, 30, 30);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    bottom: 100%;
+    left: auto;
+    right: auto;
+}
+
+.signup h3 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px white;
+}
+
+.carousel-item img {
+    height: 50dvh;
+    width: 75%;
+}
+
+.category h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: oblique;
+    color: yellowgreen;
+    background-color: seashell;
+    padding: 15px;
+}
+
+.category ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: silver;
+}
+
+.category img {
+    height: 125px;
+}
+
+.category ul li img:hover {
+    background-color: aquamarine;
+}
+
+#u_display {
+    color: red;
+    background-color: black;
+}
+
+#p_display {
+    color: red;
+    background-color: black;
+}
+
+#f_display {
+    color: red;
+    background-color: black;
+}
+
+#l_display {
+    color: red;
+    background-color: black;
+}
+
+#e_display {
+    color: red;
+    background-color: black;
+}
+
+#pass_display {
+    color: red;
+    background-color: black;
+}
+
+.pic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: silver;
+}
+
+.pic h3 {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content h3 {
+    text-align: center;
+    margin-bottom: 125px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#brand {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.blog {
+    text-align: center;
+    background-color: silver;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.blog h3 {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    margin-top: 15px;
+}
+
+.blog p {
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}

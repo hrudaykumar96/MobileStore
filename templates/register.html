@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="{% url 'register' %}">
+        <h3>Mobile<span>Store</span></h3>
+      </a>
+
+      <!-- Collapsible wrapper -->
+      <div class="d-flex align-items-center">
+        <a href="{% url 'home' %}"><button type="button" id="homeBtn" class="btn btn-link px-3 me-2">
+            Home
+          </button></a>
+        <a href="{% url 'login' %}"><button type="button" id="sigbBtn" class="btn btn-primary me-3">
+            Login
+          </button></a>
+      </div>
+    </div>
+    <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  {% if messages %}
+  <div class="row">
+    {% for message in messages %}
+    <div {% if message.tags %} class="alert {{ message.tags }} alert-dismissible fade show" role="alert" {% endif %}>
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <form onsubmit="return signup()" action="" method="post">{% csrf_token %}
+    <div class="signup">
+      <h3>Register</h3>
+      <hr>
+
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-4">
+        <div class="col">
+          <div id="f_display"></div>
+          <div class="form-outline">
+            <input type="text" name="first_name" placeholder="Enter First Name" id="form3Example1" class="form-control"
+              required>
+            <label class="form-label" for="form3Example1"><i class="fa-solid fa-user"></i></label>
+          </div>
+        </div>
+        <div class="col">
+          <div id="l_display"></div>
+          <div class="form-outline">
+
+            <input type="text" name="last_name" placeholder="Enter Last Name" id="form3Example2" class="form-control"
+              required>
+            <label class="form-label" for="form3Example2"><i class="fa-solid fa-user"></i></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email input -->
+      <div id="e_display"></div>
+      <div class="form-outline mb-4">
+        <input type="email" name="email" placeholder="Enter Email Address" id="form3Example3" class="form-control"
+          required>
+        <label class="form-label" for="form3Example3"><i class="fa-solid fa-envelope"></i></label>
+      </div>
+
+      <!-- Password input -->
+      <div id="pass_display"></div>
+      <div class="form-outline mb-4 p-2">
+        <input type="password" name="password" placeholder="Enter Password" id="form3Example4" class="form-control"
+          required>
+        <label class="form-label" for="form3Example4"><i class="fa-solid fa-lock"></i></label>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+        <label class="form-check-label" for="form2Example33">
+          Subscribe to our newsletter
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" onclick="signup()" class="btn btn-primary btn-block mb-4">Sign up</button>
+    </div>
+  </form>
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      Designed by © :
+      <a class="text-white" href="#">Hruday Kumar</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
